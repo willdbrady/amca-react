@@ -1,38 +1,57 @@
-.App {
+:root {
+  --primary-color: #0080ff;
+  --primary-color-op: #004d99;
+}
+
+@font-face {
+  font-family: "opensans regular";
+  src: url(../src/assets/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: "opensans bold";
+  src: url(../src/assets/fonts/OpenSans-ExtraBold.ttf);
+}
+
+* {
+  scroll-behavior: smooth !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "opensans regular";
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* GENERAL CSS */
+
+h1 {
+  font-family: "opensans bold";
+  font-size: 4.5rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1,
+h2,
+h3,
+p {
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  width: 350px;
+  height: 100px;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  border: none;
+  transition-duration: 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: var(--primary-color-op);
+  cursor: pointer;
 }
