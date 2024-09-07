@@ -1,0 +1,57 @@
+#section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+}
+
+#section-2 .comision-directiva {
+  display: flex;
+  flex-direction: row;
+  background-color: #f1b462;
+  padding: 80px;
+  margin: 80px;
+  margin-top: 0px;
+  border-radius: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-2 .comision-directiva h2 {
+  font-family: "opensans bold";
+  font-size: 4.5rem;
+}
+
+#section-2 .comision-directiva-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#section-2 .member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 366px;
+  width: 255px;
+  border-radius: 10px;
+  margin: 20px;
+  background-color: white;
+}
+
+#section-2 .comision-directiva .member-card img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 5px #f1b462;
+}
+
+#section-2 .comision-directiva .member-card h3 {
+  color: #004d99;
+  font-size: 1.5rem;
+}

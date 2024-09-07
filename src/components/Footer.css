@@ -1,0 +1,36 @@
+footer {
+  text-align: center;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f5075;
+}
+
+footer img {
+  width: 80px;
+}
+
+footer div:nth-child(3) img,
+footer div:nth-child(4) img {
+  width: calc(80px / 3);
+}
+
+footer div {
+  padding: 16px;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+}
+
+footer div:nth-child(2) {
+  border-left: solid white 1px;
+  border-right: solid white 1px;
+}
+
+.whatsapp-icon {
+  margin-right: 8px;
+}

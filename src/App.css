@@ -24,6 +24,7 @@ body {
   font-family: "opensans regular";
   background-color: #ffffff;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* GENERAL CSS */
@@ -54,4 +55,23 @@ button {
 button:hover {
   background-color: var(--primary-color-op);
   cursor: pointer;
+}
+
+/* LINK CSS */
+
+a {
+  text-decoration: none;
+  color: white;
+  border-radius: 3.5px;
+}
+
+li {
+  border-radius: 3.5px;
+}
+
+/* SECTION GEENERAL CSS */
+
+.section-example {
+  padding-top: 20px;
+  padding-bottom: 100px;
 }

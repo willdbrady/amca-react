@@ -1,0 +1,31 @@
+#section-2 .nuestra-comunidad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#section-2 .nuestra-comunidad h2 {
+  font-family: "opensans bold";
+  font-size: 4.5rem;
+}
+
+#section-2 .nuestra-comunidad-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#section-2 .nuestra-comunidad-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 250px;
+  margin: 20px;
+}
+
+#section-2 .nuestra-comunidad-card img {
+  width: 70px;
+}

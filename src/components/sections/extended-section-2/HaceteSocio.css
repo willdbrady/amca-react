@@ -1,0 +1,36 @@
+#section-2 .hacete-socio-wrapper {
+  background-color: #2f5075;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 80px;
+  border-radius: 50px;
+}
+
+#section-2 .hacete-socio-wrapper h1 {
+  color: white;
+  margin-bottom: 0px;
+  height: 65px;
+  line-height: 65px;
+  margin-top: 40px;
+}
+
+#section-2 .hacete-socio-wrapper img {
+  position: absolute;
+  transform: translate(235px, 35px);
+}
+
+#section-2 .hacete-socio-wrapper a {
+  background-color: #f1b462;
+  width: 360px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  margin: 40px;
+  font-size: 1.5rem;
+}

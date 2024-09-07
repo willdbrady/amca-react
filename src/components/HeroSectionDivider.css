@@ -1,0 +1,12 @@
+.svg-wrapper {
+  width: 100%;
+  object-fit: contain;
+}
+
+.quienes-svg {
+  position: absolute;
+  overflow-x: hidden;
+  z-index: 1;
+  width: 100vw;
+  transform: translate(0, -49%);
+}
