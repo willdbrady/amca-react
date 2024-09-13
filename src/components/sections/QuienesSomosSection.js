@@ -1,13 +1,18 @@
 import React from "react";
 import "./QuienesSomosSection.css";
+import Circle from "../../assets/images/circle.webp";
+import Guitar from "../../assets/images/guitar.webp";
+import Hat from "../../assets/images/hat.webp";
 
 const QuienesSomosSection = () => {
   return (
     <section id="section-1" className="section-example">
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
-      <div className="circle"></div>
+      <img id="quienes" class="guitar" src={Guitar} alt="" />
+      <img src={Hat} class="hat" alt="" />
+      <img className="circle" id="circleOne" src={Circle} alt="" />
+      <img className="circle" id="circleTwo" src={Circle} alt="" />
+      <img className="circle" id="circleThree" src={Circle} alt="" />
+      <img className="circle" id="circleFour" src={Circle} alt="" />
       <div className="quienes-main">
         <h1>Quienes somos</h1>
         <p>

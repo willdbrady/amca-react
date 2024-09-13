@@ -17,16 +17,11 @@
 }
 
 .circle {
-  content: "";
   z-index: 1;
   height: 150px;
   width: 150px;
-  border-radius: 50%;
-  background-color: #2f507581;
   position: absolute;
-}
-
-.circle:nth-child(1) {
+  opacity: 51%;
   transform: translate(570px, 50px);
 }
 
@@ -40,6 +35,12 @@
   height: 200px;
   width: 200px;
   transform: translate(825px, 500px);
+}
+
+#circleThree {
+  transform: translate(500px, 400px);
+  width: 50px;
+  height: 50px;
 }
 
 .circle:nth-child(4) {

@@ -10,11 +10,15 @@ const ContactoSection = () => {
       <div className="lower-section">
         <img className="country" src={CountryContactoImage} alt="" />
         <div className="contacto-form">
-          <form action="">
-            <input type="text" placeholder="Nombre y apellido" />
-            <input type="text" placeholder="Electrónico correo" />
-            <input type="text" placeholder="Asunto" />
-            <textarea name="" id="" placeholder="Tu mensaje..." />
+          <form action="POST" name="formaDeContacto">
+            <input id="nombre" type="text" placeholder="Nombre y apellido" />
+            <input
+              id="electronico-correo"
+              type="text"
+              placeholder="Electrónico correo"
+            />
+            <input id="asunto" type="text" placeholder="Asunto" />
+            <textarea id="mesanje" placeholder="Tu mensaje..." />
             <input className="submit-button" type="submit" value="Enviar" />
           </form>
         </div>

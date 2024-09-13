@@ -35,7 +35,7 @@ const Footer = () => {
           amca.prensaydifusión@gmail.com
         </a>
         <a href="tel:+54 11 6891-5155">
-          <img class="whatsapp-icon" src={WhatsappLogo} alt="" />
+          <img className="whatsapp-icon" src={WhatsappLogo} alt="" />
           +54 11 6891-5155
         </a>
       </div>
