@@ -3,11 +3,11 @@ import axios from "axios";
 import "./FestivalesSection.css";
 
 const FestivalesSection = () => {
-  let isMobile = false;
   const [festivos, setFestivos] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
   const [activeIndicator, setActiveIndicator] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const carouselWrapperRef = useRef(null);
 
   const fetchEvents = async () => {
@@ -24,16 +24,32 @@ const FestivalesSection = () => {
   }, []);
 
   useEffect(() => {
-    const cardElement = document.querySelector(".festivales-carousel__card");
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  let isMobile = windowWidth <= 750 ? true : false;
+
+  useEffect(() => {
+    const cardElement = isMobile
+      ? document.querySelector(".festivales-carousel-mobile__card")
+      : document.querySelector(".festivales-carousel__card");
     if (cardElement) {
-      setCardWidth(cardElement.offsetWidth + 40);
+      setCardWidth(cardElement.offsetWidth + (isMobile ? 50 : 40));
     }
   }, [festivos]);
 
   const handleNext = () => {
-    if (currentIndex < festivos.length - 3) {
+    if (currentIndex < festivos.length - (isMobile ? 1 : 3)) {
       setCurrentIndex(currentIndex + 1);
-      setActiveIndicator((prev) => (prev < festivos.length - 3 ? prev + 1 : 0));
+      setActiveIndicator((prev) =>
+        prev < festivos.length - (isMobile ? 1 : 3) ? prev + 1 : 0
+      );
     }
   };
 
@@ -45,7 +61,6 @@ const FestivalesSection = () => {
   };
 
   useEffect(() => {
-    // Update the carousel's position based on the current index
     const offset = -currentIndex * cardWidth;
     if (carouselWrapperRef.current) {
       carouselWrapperRef.current.style.transform = `translateX(${offset}px)`;
@@ -58,11 +73,18 @@ const FestivalesSection = () => {
       <div className="festivales-carousel">
         <div
           className="festivales-carousel__track-container"
-          ref={carouselWrapperRef} // Attach the ref to this container
+          ref={carouselWrapperRef}
         >
           <ul className="festivales-carousel__track">
             {festivos.map((item) => (
-              <li className="festivales-carousel__card" key={item._id}>
+              <li
+                className={
+                  isMobile
+                    ? "festivales-carousel__card festivales-carousel-mobile__card"
+                    : "festivales-carousel__card"
+                }
+                key={item._id}
+              >
                 <img src={item.imageUrl} alt="" />
                 <div className="card-info">
                   <h3 className="card-header">{item.title}</h3>
@@ -74,7 +96,33 @@ const FestivalesSection = () => {
           </ul>
         </div>
       </div>
-      {isMobile || festivos.length > 3 ? (
+      {isMobile ? (
+        <div className="festivales-carousel__indicators">
+          <button
+            onClick={handlePrev}
+            className="festivales-carousel__button festivales-carousel__button--left"
+          >
+            &lt;
+          </button>
+          {festivos.slice(0, festivos.length).map((_, index) => (
+            <span
+              key={index}
+              className={`festivales-carousel__indicator ${
+                index === activeIndicator
+                  ? "festivales-carousel__indicator--active"
+                  : ""
+              }`}
+            ></span>
+          ))}
+          <button
+            onClick={handleNext}
+            className="festivales-carousel__button festivales-carousel__button--right"
+          >
+            {" "}
+            &gt;
+          </button>
+        </div>
+      ) : festivos.length > 3 ? (
         <div className="festivales-carousel__indicators">
           <button
             onClick={handlePrev}

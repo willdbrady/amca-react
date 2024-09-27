@@ -1,9 +1,9 @@
 #section-3 {
   background-color: #2f5075;
-  min-height: 125vh;
+  min-height: 762px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  padding-bottom: 0px;
 }
 
 #section-3 h2 {
@@ -19,6 +19,7 @@
 
 .festivales-carousel {
   height: 60vh;
+  min-height: 495px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,7 +91,8 @@
   font-size: 1rem;
   height: 47px;
   border-radius: 3.5px;
-  margin: 40px;
+  margin-left: 40px;
+  margin-bottom: 40px;
 }
 
 .festivales-carousel__card .card-info button:hover {
@@ -128,4 +130,16 @@
 
 .festivales-carousel__indicator--active {
   background-color: #00b9da;
+}
+
+.festivales-carousel-mobile__card {
+  display: flex;
+  flex-direction: column;
+  min-width: calc(100% - 20px);
+  height: 100%;
+  margin: 0px 40px;
+  margin-left: 10px;
+  background-color: #f0f0f0;
+  text-align: left;
+  border-radius: 10px;
 }

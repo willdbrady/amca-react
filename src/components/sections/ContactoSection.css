@@ -1,6 +1,10 @@
 #section-4 {
   display: flex;
   flex-direction: column;
+  background-image: url("../../assets/images/decorative-elements/Vector-with-blue.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: calc(0.37 * 45%);
 }
 
 #section-4 h1 {
