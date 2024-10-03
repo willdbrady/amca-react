@@ -7,8 +7,8 @@ import Hat from "../../assets/images/hat.webp";
 const QuienesSomosSection = () => {
   return (
     <section id="section-1" className="section-example">
-      <img id="quienes" class="guitar" src={Guitar} alt="" />
-      <img src={Hat} class="hat" alt="" />
+      <img id="quienes" className="guitar" src={Guitar} alt="" />
+      <img src={Hat} className="hat" alt="" />
       <img className="circle" id="circleOne" src={Circle} alt="" />
       <img className="circle" id="circleTwo" src={Circle} alt="" />
       <img className="circle" id="circleThree" src={Circle} alt="" />

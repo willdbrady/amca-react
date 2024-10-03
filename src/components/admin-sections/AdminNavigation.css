@@ -1,0 +1,12 @@
+.logout-button {
+  height: auto;
+  width: auto;
+  color: white;
+  font-size: 1rem;
+  margin-right: 14px;
+  font-family: "opensans regular";
+}
+
+.logout-button:hover {
+  background-color: #f1b462;
+}

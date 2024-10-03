@@ -1,0 +1,36 @@
+.LoginPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.LoginPage img {
+  width: 20%;
+}
+
+#loginForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.LoginInput {
+  margin: 0.5rem;
+  font-size: 1.5rem;
+}
+
+#loginForm button {
+  height: auto;
+  width: auto;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.GoBack {
+  color: blue;
+  font-style: italic;
+  margin-top: 0.5rem;
+}

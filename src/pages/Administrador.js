@@ -1,6 +1,7 @@
 import React from "react";
 import { jwtDecode } from "jwt-decode"; // No need to destructure
 import { Navigate } from "react-router-dom";
+import AdminNavigation from "../components/admin-sections/AdminNavigation";
 
 const Administrador = () => {
   const token = localStorage.getItem("authToken");
@@ -19,7 +20,11 @@ const Administrador = () => {
     return <Navigate to="/administrador-login" />;
   }
 
-  return <>Admin Page</>;
+  return (
+    <>
+      <AdminNavigation />
+    </>
+  );
 };
 
 export default Administrador;
