@@ -14,6 +14,7 @@ import AdministradorLogin from "./pages/AdministradorLogin";
 import AdministradorRegister from "./pages/AdministradorRegister";
 
 function App() {
+  // If there is a token for authentication, retrieves the token from local storage.
   const [token, setToken] = React.useState(localStorage.getItem("authToken"));
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function App() {
       try {
         const response = await axios.get("/protected", {
           headers: {
-            "x-auth-token": token, // Send token in the request header
+            "x-auth-token": token,
           },
         });
         if (response.status === 200) {
